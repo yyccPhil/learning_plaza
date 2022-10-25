@@ -34,6 +34,11 @@ def print_formatted(number):
     l = len(binary(number))
     for i in range(1, number + 1):
         print("{}".format(i).rjust(l) + " " + octal(i).rjust(l) + " " + hexa(i).rjust(l) + " " + binary(i).rjust(l))
+      
+#     Using built-in func
+#     l = len(bin(number)[2:])
+#     for i in range(1, number + 1):
+#         print("{}".format(i).rjust(l) + " " + oct(i)[2:].rjust(l) + " " + hex(i)[2:].upper().rjust(l) + " " + bin(i)[2:].rjust(l))
             
 
 if __name__ == '__main__':
