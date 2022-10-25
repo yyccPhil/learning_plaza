@@ -1,8 +1,6 @@
-# Manual binary, octal, hex
-
 
 def print_formatted(number):
-    # your code goes here
+    # Manual binary, octal, hex
     def binary(b):
         b_list = list()
         i = b
