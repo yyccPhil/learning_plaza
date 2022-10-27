@@ -58,3 +58,16 @@ result_lst = ["".join(result_lst[i]) for i in range(len(result_lst))]
     
 for result in sorted(result_lst):
     print(result)
+
+# --------------------------------------------------------------------------------------------
+    
+# Polar Coordinates
+import cmath
+
+z = complex(input())
+
+r = abs(z)
+fi = cmath.phase(z)
+
+print("{:.3f}".format(r))
+print("{:.3f}".format(fi))
