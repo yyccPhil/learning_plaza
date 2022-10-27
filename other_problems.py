@@ -30,9 +30,13 @@ from itertools import product
 a = map(int, input().split())
 b = map(int, input().split())
 
-result_lst = list(product(a, b))
+# result_lst = list(product(a, b))
 
-print(result_lst[0], end = "")
-for i in range(1, len(result_lst)):
-    print(" ", end = "")
-    print(result_lst[i], end = "")
+# print(result_lst[0], end = "")
+# for i in range(1, len(result_lst)):
+#     print(" ", end = "")
+#     print(result_lst[i], end = "")
+
+print(*product(a, b))
+
+
