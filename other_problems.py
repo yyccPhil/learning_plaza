@@ -40,3 +40,21 @@ b = map(int, input().split())
 print(*product(a, b))
 
 
+
+# itertools.permutations()
+
+from itertools import permutations
+
+s, r = input().split()
+s = list(s)
+r = int(r)
+
+result_lst = list(permutations(s, r))
+
+# for i in range(len(result_lst)):
+#     result_lst[i] = "".join(result_lst[i])
+
+result_lst = ["".join(result_lst[i]) for i in range(len(result_lst))]
+    
+for result in sorted(result_lst):
+    print(result)
