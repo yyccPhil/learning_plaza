@@ -62,6 +62,7 @@ for result in sorted(result_lst):
 # --------------------------------------------------------------------------------------------
     
 # Polar Coordinates
+
 import cmath
 
 z = complex(input())
@@ -75,6 +76,7 @@ print("{:.3f}".format(fi))
 # --------------------------------------------------------------------------------------------
 
 # Introduction to Sets
+
 def average(array):
     return sum(set(array))/len(set(array))
 
@@ -83,3 +85,24 @@ if __name__ == '__main__':
     arr = list(map(int, input().split()))
     result = average(arr)
     print(result)
+
+    
+# --------------------------------------------------------------------------------------------
+
+# DefaultDict Tutorial
+
+from collections import defaultdict
+d = defaultdict(list)
+
+n, m = map(int, input().split())
+
+for i in range(n):
+    d[input()].append(str(i + 1))
+
+for i in range(m):
+    check = input()
+    if d.get(check):
+        print(" ".join(d[check]))
+    else:
+        print(-1)
+        
