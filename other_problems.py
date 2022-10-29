@@ -106,3 +106,11 @@ for i in range(m):
     else:
         print(-1)
         
+# --------------------------------------------------------------------------------------------
+
+# Calendar Module
+
+import calendar
+
+month, day, year = map(int, input().split())
+print(calendar.weekheader(15).split()[calendar.weekday(year, month, day)].upper())
