@@ -114,3 +114,14 @@ import calendar
 
 month, day, year = map(int, input().split())
 print(calendar.weekheader(15).split()[calendar.weekday(year, month, day)].upper())
+
+# --------------------------------------------------------------------------------------------
+
+# Find Angle MBC
+
+import math
+
+AB = int(input())
+BC = int(input())
+print("{}\N{DEGREE SIGN}".format(round(180/math.pi * math.atan(AB/BC))))
+
