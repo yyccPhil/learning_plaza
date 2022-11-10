@@ -144,3 +144,14 @@ u = m.difference(n).union(n.difference(m))
 for i in sorted(u):
     print(i)
 
+# --------------------------------------------------------------------------------------------
+
+# itertools.combinations()
+
+from itertools import combinations
+S, k = input().split()
+S = sorted(list(S))
+k = int(k)
+for i in range(1, k+1):
+    for j in combinations(S, i):
+        print("".join(j))
