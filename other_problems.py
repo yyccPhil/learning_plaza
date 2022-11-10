@@ -125,3 +125,22 @@ AB = int(input())
 BC = int(input())
 print("{}\N{DEGREE SIGN}".format(round(180/math.pi * math.atan(AB/BC))))
 
+
+# --------------------------------------------------------------------------------------------
+
+# Symmetric Difference
+
+M = input()
+m = set(map(int, input().split()))
+N = input()
+n = set(map(int, input().split()))
+
+u = m.difference(n).union(n.difference(m))
+# u = m.union(n)
+# for i in m.intersection(n):
+#     u.discard(i)
+
+# for i in sorted(list(u)):
+for i in sorted(u):
+    print(i)
+
