@@ -155,3 +155,12 @@ k = int(k)
 for i in range(1, k+1):
     for j in combinations(S, i):
         print("".join(j))
+        
+# --------------------------------------------------------------------------------------------
+      
+# Set .add()
+
+stamp = set()
+for i in range(int(input())):
+    stamp.add(input())
+print(len(stamp))
