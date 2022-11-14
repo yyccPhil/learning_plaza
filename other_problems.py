@@ -164,3 +164,14 @@ stamp = set()
 for i in range(int(input())):
     stamp.add(input())
 print(len(stamp))
+
+# --------------------------------------------------------------------------------------------
+      
+# itertools.combinations_with_replacement()
+
+from itertools import combinations_with_replacement
+S, k = input().split()
+S = sorted(S)
+k = int(k)
+for i in combinations_with_replacement(S,k):
+    print("".join(i))
