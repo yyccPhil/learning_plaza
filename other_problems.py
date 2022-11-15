@@ -175,3 +175,29 @@ S = sorted(S)
 k = int(k)
 for i in combinations_with_replacement(S,k):
     print("".join(i))
+
+# --------------------------------------------------------------------------------------------
+      
+# Word Order
+    
+from collections import OrderedDict
+
+s = OrderedDict()
+for i in range(int(input())):
+    w = input()
+    s[w] = s.get(w, 0) + 1
+    
+print(len(s))
+print(*s.values())
+
+# s = dict()
+# w_lst = list()
+# for i in range(int(input())):
+#     w = input()
+#     if not s.get(w):
+#         w_lst.append(w)
+#     s[w] = s.get(w, 0) + 1
+    
+# print(len(s))
+# for i in w_lst:
+#     print(s[i], end = " ")
