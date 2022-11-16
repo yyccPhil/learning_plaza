@@ -201,3 +201,22 @@ print(*s.values())
 # print(len(s))
 # for i in w_lst:
 #     print(s[i], end = " ")
+
+# --------------------------------------------------------------------------------------------
+
+# Set .discard(), .remove() & .pop()
+# But here is a question: It seems like .pop() doesn't remove a random element, but I didn't find the specific rule of removement after many cases I tried. Could anybody explain the rule? Thanks!
+
+n = int(input())
+s = set(map(int, input().split()))
+
+for i in range(int(input())):
+    com = input().split()
+    if len(com) == 1:
+        s.pop()
+    else:
+        if com[0] == "remove":
+            s.remove(int(com[1]))
+        else:
+            s.discard(int(com[1]))
+print(sum(s))
