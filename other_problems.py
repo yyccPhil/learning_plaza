@@ -205,7 +205,6 @@ print(*s.values())
 # --------------------------------------------------------------------------------------------
 
 # Set .discard(), .remove() & .pop()
-# But here is a question: It seems like .pop() doesn't remove a random element, but I didn't find the specific rule of removement after many cases I tried. Could anybody explain the rule? Thanks!
 
 n = int(input())
 s = set(map(int, input().split()))
