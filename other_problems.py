@@ -219,3 +219,15 @@ for i in range(int(input())):
         else:
             s.discard(int(com[1]))
 print(sum(s))
+
+# --------------------------------------------------------------------------------------------
+
+# Compress the String!
+
+from itertools import groupby
+print(*[(len(list(g)), int(k)) for k, g in groupby(input())])
+
+# res = list()
+# for k, g in groupby(input()):
+#     res.append((len(list(g)), int(k)))
+# print(*res)
