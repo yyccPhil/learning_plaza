@@ -231,3 +231,14 @@ print(*[(len(list(g)), int(k)) for k, g in groupby(input())])
 # for k, g in groupby(input()):
 #     res.append((len(list(g)), int(k)))
 # print(*res)
+
+# --------------------------------------------------------------------------------------------
+
+# Set .union() Operation
+
+n = input()
+N = set(input().split())
+b = input()
+B = set(input().split())
+# print(len(N.union(B)))
+print(len(N|B))
