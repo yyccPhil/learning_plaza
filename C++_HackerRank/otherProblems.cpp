@@ -51,3 +51,13 @@ int main() {
     }
     return 0;
 }
+
+// -----------------------------------------------------------------------------------------------
+
+// Functions
+int max_of_four(int a, int b, int c, int d) {
+    if (a > b) b = a;
+    if (b > c) c = b;
+    if (c > d) d = c;
+    return d;
+}
