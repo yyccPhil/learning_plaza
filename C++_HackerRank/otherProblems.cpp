@@ -61,3 +61,22 @@ int max_of_four(int a, int b, int c, int d) {
     if (c > d) d = c;
     return d;
 }
+
+// -----------------------------------------------------------------------------------------------
+
+// Conditional Statements
+int main()
+{
+    string n_temp;
+    getline(cin, n_temp);
+
+    int n = stoi(ltrim(rtrim(n_temp)));
+
+    // Write your code here
+    string numbers[] = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+    
+    if (n <= 9) cout << numbers[n - 1];
+    else cout << "Greater than 9";
+
+    return 0;
+}
