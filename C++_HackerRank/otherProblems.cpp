@@ -80,3 +80,16 @@ int main()
 
     return 0;
 }
+
+// -----------------------------------------------------------------------------------------------
+
+// Pointer
+void update(int *a,int *b) {
+    // Complete this function    
+    int temp = 0;
+    temp = *a + *b;
+    if (*a > *b) *b = *a - *b;
+    else *b -= *a;
+    *a = temp;    
+}
+
