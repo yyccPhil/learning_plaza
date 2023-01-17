@@ -93,3 +93,17 @@ void update(int *a,int *b) {
     *a = temp;    
 }
 
+// -----------------------------------------------------------------------------------------------
+
+// Arrays Introduction
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+    int size;
+    cin >> size;
+    
+    int numbers[size];
+    for (int i = size - 1; i >= 0; i--) cin >> numbers[i];
+    for (int number: numbers) cout << number << ' ';    
+    
+    return 0;
+}
