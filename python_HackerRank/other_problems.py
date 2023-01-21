@@ -256,9 +256,11 @@ print("{0}\n{1}\n({0}, {1})".format(div, mod))
 # --------------------------------------------------------------------------------------------
 
 # Power - Mod Power
+
 a = int(input())
 b = int(input())
 m = int(input())
 
 print(pow(a, b))
 print(pow(a, b, m))
+
