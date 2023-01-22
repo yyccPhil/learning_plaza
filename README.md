@@ -1,4 +1,4 @@
-# My HackerRank
+# LeetCode + HackerRank
 <a href="https://www.hackerrank.com/yyccmx">The place to practice my language basis: </a>python, SQL, C++.
 
 ## python_HackerRank
