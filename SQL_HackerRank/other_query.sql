@@ -96,3 +96,11 @@ from city
 SELECT ROUND(SUM(LAT_N), 2) AS lat, ROUND(SUM(LONG_W), 2) AS lon
 FROM STATION
 
+------------------------------------------------------------------------------------
+
+-- Top Earners
+SELECT months * salary AS earnings, count(months * salary) AS num_earnings
+FROM Employee
+GROUP BY earnings
+ORDER BY earnings DESC
+LIMIT 1
