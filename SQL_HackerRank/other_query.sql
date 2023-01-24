@@ -104,3 +104,10 @@ FROM Employee
 GROUP BY earnings
 ORDER BY earnings DESC
 LIMIT 1
+
+------------------------------------------------------------------------------------
+
+-- Weather Observation Station 13
+SELECT truncate(sum(LAT_N), 4)
+FROM STATION
+WHERE LAT_N < 137.2345 AND LAT_N > 38.788
