@@ -121,3 +121,48 @@ WHERE LAT_N < 137.2345
 ORDER BY LAT_N DESC
 LIMIT 1
 
+------------------------------------------------------------------------------------
+
+-- Weather Observation Station 15
+SELECT round(LONG_W, 4)
+FROM STATION
+WHERE LAT_N = (
+    SELECT max(LAT_N)
+    FROM STATION
+    WHERE LAT_N < 137.2345
+)
+
+------------------------------------------------------------------------------------
+
+-- Weather Observation Station 16
+SELECT round(min(LAT_N), 4)
+FROM STATION
+WHERE LAT_N > 38.778
+
+------------------------------------------------------------------------------------
+
+-- Weather Observation Station 17
+SELECT round(LONG_W, 4)
+FROM STATION
+WHERE LAT_N = (
+    SELECT min(LAT_N)
+    FROM STATION
+    WHERE LAT_N > 38.778
+)
+
+------------------------------------------------------------------------------------
+
+-- Weather Observation Station 18
+SELECT round(
+        (SELECT max(LAT_N) FROM STATION) - (SELECT min(LAT_N) FROM STATION) +
+        (SELECT max(LONG_W) FROM STATION) - (SELECT min(LONG_W) FROM STATION)
+    , 4)
+    
+
+------------------------------------------------------------------------------------
+
+-- Weather Observation Station 19
+SELECT round(SQRT(
+        POW(((SELECT max(LAT_N) FROM STATION) - (SELECT min(LAT_N) FROM STATION)), 2) + POW(((SELECT max(LONG_W) FROM STATION) - (SELECT min(LONG_W) FROM STATION)), 2)
+    ), 4)
+    
