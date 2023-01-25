@@ -166,3 +166,10 @@ SELECT round(SQRT(
         POW(((SELECT max(LAT_N) FROM STATION) - (SELECT min(LAT_N) FROM STATION)), 2) + POW(((SELECT max(LONG_W) FROM STATION) - (SELECT min(LONG_W) FROM STATION)), 2)
     ), 4)
     
+------------------------------------------------------------------------------------
+
+-- Population Census
+SELECT sum(CITY.POPULATION)
+FROM CITY
+LEFT JOIN COUNTRY ON CITY.CountryCode = COUNTRY.Code
+WHERE COUNTRY.CONTINENT = 'Asia'
