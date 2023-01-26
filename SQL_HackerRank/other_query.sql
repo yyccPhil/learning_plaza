@@ -173,3 +173,12 @@ SELECT sum(CITY.POPULATION)
 FROM CITY
 LEFT JOIN COUNTRY ON CITY.CountryCode = COUNTRY.Code
 WHERE COUNTRY.CONTINENT = 'Asia'
+
+------------------------------------------------------------------------------------
+
+-- African Cities
+SELECT CITY.NAME
+FROM CITY
+LEFT JOIN COUNTRY ON CITY.CountryCode = COUNTRY.Code
+WHERE COUNTRY.CONTINENT = 'Africa'
+
