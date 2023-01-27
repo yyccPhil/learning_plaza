@@ -182,3 +182,10 @@ FROM CITY
 LEFT JOIN COUNTRY ON CITY.CountryCode = COUNTRY.Code
 WHERE COUNTRY.CONTINENT = 'Africa'
 
+------------------------------------------------------------------------------------
+
+-- Average Population of Each Continent
+SELECT COUNTRY.Continent, truncate(avg(CITY.POPULATION), 0) AS pop_avg      -- rounded down to the nearest integer <==> truncate(n, 0)
+FROM CITY
+JOIN COUNTRY ON CITY.CountryCode = COUNTRY.Code
+GROUP BY COUNTRY.Continent
