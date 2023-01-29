@@ -189,3 +189,7 @@ SELECT COUNTRY.Continent, truncate(avg(CITY.POPULATION), 0) AS pop_avg      -- r
 FROM CITY
 JOIN COUNTRY ON CITY.CountryCode = COUNTRY.Code
 GROUP BY COUNTRY.Continent
+
+------------------------------------------------------------------------------------
+
+-- 
