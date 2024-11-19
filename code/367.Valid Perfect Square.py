@@ -12,7 +12,7 @@
 # @lc code=start
 class Solution:
     def isPerfectSquare(self, num: int) -> bool:
-        left = 0
+        left = 1
         right = num
         while left <= right:
             mid = left + (right - left) // 2
