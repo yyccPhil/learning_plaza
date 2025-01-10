@@ -19,15 +19,22 @@
 class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         res = list()
-        def dfs(root):
-            if root is None:
-                return
-            
-            dfs(root.left)
+        my_stack = list()
+        def deepLeft(root):
+            while root:
+                my_stack.append(root)
+                if root.left:
+                    root = root.left
+                else:
+                    break
+        deepLeft(root)
+        while my_stack:
+            # res.append(my_stack.pop().val)
+            root = my_stack.pop()
             res.append(root.val)
-            dfs(root.right)
-        
-        dfs(root)
+            if root.right:
+                deepLeft(root.right)
+            
         return res
             
         

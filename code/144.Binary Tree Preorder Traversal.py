@@ -19,14 +19,20 @@
 class Solution:
     def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         res = list()
-        def dfs(root):
-            if root is None:
-                return
-            res.append(root.val)
-            dfs(root.left)
-            dfs(root.right)
-        dfs(root)
-        return res            
+        if not root:
+            return res
+        my_stack = [root]
+        
+        while my_stack:
+            mid = my_stack.pop()
+            res.append(mid.val)
+            if mid.right:
+                my_stack.append(mid.right)
+            if mid.left:
+                my_stack.append(mid.left)
+        
+        return res
+        
         
 # @lc code=end
 

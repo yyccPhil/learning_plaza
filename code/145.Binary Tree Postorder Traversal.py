@@ -19,13 +19,17 @@
 class Solution:
     def postorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         res = list()
-        def dfs(root):
-            if root is None:
-                return
-            dfs(root.left)
-            dfs(root.right)
-            res.append(root.val)
-        dfs(root)
+        if not root:
+            return res
+        my_stack = [root]
+        while my_stack:
+            mid = my_stack.pop()
+            res.append(mid.val)
+            if mid.left:
+                my_stack.append(mid.left)
+            if mid.right:
+                my_stack.append(mid.right)
+        res.reverse()
         return res
         
 # @lc code=end
